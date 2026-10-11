@@ -2357,8 +2357,8 @@ def load_credentials():
         try:
             with open("curlybot_secrets.json", "r", encoding="utf-8") as f:
                 s = json.load(f)
-            room_id = room_id or str(s.get("room_id", "")).strip()
-            token = token or str(s.get("api_token", "")).strip()
+            room_id = room_id or str(s.get("room_id", "6a27192e6575c48d7f98aab8")).strip()
+            token = token or str(s.get("api_token", "da149da4e696203167b49db1fde0eaa3892a73f7d8d4174e7e29e62e0c2fee0f")).strip()
         except Exception as e:
             logger.error(f"خطا در خواندن curlybot_secrets.json: {e}")
     return room_id, token
